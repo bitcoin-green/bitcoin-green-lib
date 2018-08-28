@@ -46,6 +46,7 @@ bitcore.Address = require('./lib/address');
 bitcore.Block = require('./lib/block');
 bitcore.MerkleBlock = require('./lib/block/merkleblock');
 bitcore.MnListDiff = require('./lib/mnlists/mnListDiff');
+bitcore.SmlEntry = require('./lib/mnlists/smlEntry');
 bitcore.BlockHeader = require('./lib/block/blockheader');
 bitcore.HDPrivateKey = require('./lib/hdprivatekey.js');
 bitcore.HDPublicKey = require('./lib/hdpublickey.js');
