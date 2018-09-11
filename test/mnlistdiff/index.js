@@ -5,7 +5,7 @@ const should = require('chai').should();
 describe('MnListDiff', () => {
     let mnlistdiff = null;
     before(() => {
-        mnlistdiff = new MnListDiff(mnListDiffData)
+        mnlistdiff = new MnListDiff(new Buffer(mnListDiffData, 'hex'))
     });
 
     it('should initialise mnlistdiff from json args', () => {
