@@ -9,7 +9,7 @@ describe('MnListDiff', () => {
         mnlistdiff = new MnListDiff(new Buffer(mnListDiffData, 'hex'))
     });
 
-    it('should initialise mnlistdiff from json args', () => {
+    it('should initialise mnlistdiff from json args', (done) => {
         mnlistdiff.baseBlockHash.should.equal('3f4a8012763b1d9b985cc77b0c0bca918830b1ef7dd083665bdc592c2cd31cf6');
         mnlistdiff.blockHash.should.equal('000004543e350b99f43114fe0bf649344a28f4fde6785d80e487d90689ae3918');
         mnlistdiff.deletedMNs.length.should.equal(0);
@@ -20,6 +20,8 @@ describe('MnListDiff', () => {
         // mnlistdiff.totalTransactions.should.equal(xxx)
 
         mnlistdiff.mnList.length.should.equal(3);
+
+        done();
     });
 
     it('should initialise smlentry from json args', () => {
