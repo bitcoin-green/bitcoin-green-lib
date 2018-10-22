@@ -2,6 +2,11 @@ language: node_js
 sudo: required
 addons:
  chrome: stable
+branches:
+ only:
+   - develop
+   - master
+   - evo
 node_js:
 - '6'
 - '7'
@@ -10,8 +15,22 @@ before_install:
   - npm install -g bower
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 install:
   - bower install
   - npm install
 after_script:
   - gulp coveralls
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npm publish --tag alpha
+    on:
+      repo: dashevo/dashcore-lib
+      branch: evo
+  - provider: script
+    skip_cleanup: true
+    script: npm publish
+    on:
+      repo: dashevo/dashcore-lib
+      branch: master
