@@ -5,7 +5,7 @@ var mnListDiffData = '0000000000000000000000000000000000000000000000000000000000
 
 describe('SimplifiedMNListDiff', function () {
   it('Should be able to parse a serialized simplified MN list ', function () {
-    var simplifiedMNListDiff = new SimplifiedMNListDiff.fromHexString(mnListDiffData);
+    var simplifiedMNListDiff = SimplifiedMNListDiff.fromHexString(mnListDiffData);
     expect(simplifiedMNListDiff.baseBlockHash).to.be.equal('3f4a8012763b1d9b985cc77b0c0bca918830b1ef7dd083665bdc592c2cd31cf6');
     expect(simplifiedMNListDiff.blockHash).to.be.equal('000004543e350b99f43114fe0bf649344a28f4fde6785d80e487d90689ae3918');
     expect(simplifiedMNListDiff.totalTransactions).to.be.equal(1);
@@ -20,19 +20,8 @@ describe('SimplifiedMNListDiff', function () {
   });
 
   it('Should restore parsed data to the same form', function () {
-
+    var simplifiedMNListDiff = SimplifiedMNListDiff.fromHexString(mnListDiffData);
+    expect(simplifiedMNListDiff.toBuffer().toString('hex')).to.be.equal(mnListDiffData)
   });
 
-  it('should initialise smlentry from json args', function () {
-    var smlEntry = mnlistdiff.mnList[0];
-    smlEntry.isValid.should.equal(true);
-    smlEntry.keyIDOperator.should.equal('43ce12751c4ba45dcdfe2c16cefd61461e17a54d');
-    smlEntry.keyIDVoting.should.equal('43ce12751c4ba45dcdfe2c16cefd61461e17a54d');
-    smlEntry.proRegTxHash.should.equal('f7737beb39779971e9bc59632243e13fc5fc9ada93b69bf48c2d4c463296cd5a');
-    smlEntry.service.should.equal('207.154.244.13:19999');
-  });
-
-  it('should initialise cbTx from json args', function () {
-    throw new Error('Not implemented');
-  });
 });
