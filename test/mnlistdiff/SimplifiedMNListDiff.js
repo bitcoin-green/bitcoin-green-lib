@@ -1,4 +1,4 @@
-var SimplifiedMNListDiff = require('../../lib/mnlists/SimplifiedMNListDiff');
+var SimplifiedMNListDiff = require('../../lib/deterministcmnlist/SimplifiedMNListDiff');
 var expect = require('chai').expect;
 
 var mnListDiffJSON = { baseBlockHash: '000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e',
