@@ -18,12 +18,12 @@ describe('ip', function () {
 
   describe('#bufferToIpAndPort', function () {
     it('Should parse ip and port serialized to a binary', function () {
-      var expectedIpAndBuffer = '192.168.0.1:6001';
+      var expectedAddressString = '192.168.0.1:6001';
       // c0a80001 - 192.168.0.1 as a hex string, 1771 is 6001 as UInt16BE
       var ipAndPortBuffer = Buffer.from('000000000000000000000000c0a800011771', 'hex');
 
-      var parsed = ip.bufferToIPAndPort(ipAndPortBuffer);
-      expect(parsed).to.be.equal(expectedIpAndBuffer);
+      var addressString = ip.bufferToIPAndPort(ipAndPortBuffer);
+      expect(addressString).to.be.equal(expectedAddressString);
     });
   });
 
