@@ -30,24 +30,24 @@ var smlEntryWithDifferentKeysHex = '75aa128db4cd7679fd88206bd6ef71f57e1b6fe04c2d
 describe('SimplifiedMNListEntry', function () {
   describe('constructor', function () {
     it('Should create an entry object from JSON object', function () {
-      var diff = new SimplifiedMNListEntry(smlEntryWithDifferentKeys);
-      expect(diff.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
+      var entry = new SimplifiedMNListEntry(smlEntryWithDifferentKeys);
+      expect(entry.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
     });
     it('Should create an entry object from a buffer', function () {
-      var diff = new SimplifiedMNListEntry(Buffer.from(smlEntryWithDifferentKeysHex, 'hex'));
-      expect(diff.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
+      var entry = new SimplifiedMNListEntry(Buffer.from(smlEntryWithDifferentKeysHex, 'hex'));
+      expect(entry.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
     });
     it('Should create an entry object from a hex string', function () {
-      var diff = new SimplifiedMNListEntry(smlEntryWithDifferentKeysHex);
-      expect(diff.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
+      var entry = new SimplifiedMNListEntry(smlEntryWithDifferentKeysHex);
+      expect(entry.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
     });
     it('Should copy an instance if SimplifiedMNListEntry is passed', function () {
-      var diff1 = new SimplifiedMNListEntry(smlEntryWithDifferentKeys);
-      var diff2 = new SimplifiedMNListEntry(diff1);
-      diff1.keyIDVoting = 'something';
-      expect(diff2.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
-      expect(diff1.keyIDVoting).to.be.equal('something');
-      expect(diff2.keyIDVoting).to.be.equal('43ce12751c4ba45dcdfe2c16cefd61461e17a54d');
+      var entry1 = new SimplifiedMNListEntry(smlEntryWithDifferentKeys);
+      var entry2 = new SimplifiedMNListEntry(entry1);
+      entry1.keyIDVoting = 'something';
+      expect(entry2.toObject()).to.be.deep.equal(smlEntryWithDifferentKeys);
+      expect(entry1.keyIDVoting).to.be.equal('something');
+      expect(entry2.keyIDVoting).to.be.equal('43ce12751c4ba45dcdfe2c16cefd61461e17a54d');
     });
   });
   describe('fromBuffer', function () {

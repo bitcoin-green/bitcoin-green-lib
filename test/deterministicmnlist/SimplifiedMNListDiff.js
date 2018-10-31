@@ -53,29 +53,10 @@ describe('SimplifiedMNListDiff', function () {
 
   });
   describe('toBuffer', function () {
-    it('Should serialize data to same buffer', function () {
-      var buf = new SimplifiedMNListDiff(mnListDiffHexString).toBuffer();
-      expect(buf.toString('hex')).to.be.equal(mnListDiffHexString);
+    it('Should be able to recover same data', function () {
+      var buf = new SimplifiedMNListDiff(mnListDiffJSON).toBuffer();
+      var diff = new SimplifiedMNListDiff(buf);
+      expect(diff.toObject()).to.be.equal(mnListDiffJSON);
     });
   });
-  // it('Should be able to parse a serialized simplified MN list ', function () {
-  //   var simplifiedMNListDiff = SimplifiedMNListDiff.fromHexString(mnListDiffData);
-  //   expect(simplifiedMNListDiff.baseBlockHash).to.be.equal('3f4a8012763b1d9b985cc77b0c0bca918830b1ef7dd083665bdc592c2cd31cf6');
-  //   expect(simplifiedMNListDiff.blockHash).to.be.equal('000004543e350b99f43114fe0bf649344a28f4fde6785d80e487d90689ae3918');
-  //   expect(simplifiedMNListDiff.totalTransactions).to.be.equal(1);
-  //   expect(simplifiedMNListDiff.deletedMNs.length).to.be.equal(0);
-  //
-  //   //Todo replace undefined after core bugfix
-  //   // simplifiedMNListDiff.merkleFlags.should.equal(xxx)
-  //   // simplifiedMNListDiff.merkleHashes.should.equal(xxx)
-  //   // simplifiedMNListDiff.totalTransactions.should.equal(xxx)
-  //
-  //   simplifiedMNListDiff.mnList.length.should.equal(3);
-  // });
-  //
-  // it('Should restore parsed data to the same form', function () {
-  //   var simplifiedMNListDiff = SimplifiedMNListDiff.fromHexString(mnListDiffData);
-  //   expect(simplifiedMNListDiff.toBuffer().toString('hex')).to.be.equal(mnListDiffData)
-  // });
-
 });
