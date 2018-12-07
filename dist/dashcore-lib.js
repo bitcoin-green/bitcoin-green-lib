@@ -55373,7 +55373,9 @@ var CURRENT_PAYLOAD_VERSION = 1;
 
 /**
 * @typedef {Object} CommitmentTxPayloadJSON
-* @property {number} version	uint16_t	2	Version of the final commitment message
+* @property {number} version	uint16_t	2	Commitment special transaction version number. Currently set to 1. Please note that this is not the same as the version field of qfcommit
+* @property {number} height	uint16_t	2	The height of the block in which this commitment is included
+* @property {number} qfcVersion	uint16_t	2	Version of the final commitment message
 * @property {number} llmqtype	uint8_t	1	type of the long living masternode quorum
 * @property {string} quorumHash	uint256	32	The quorum identifier
 * @property {number} signersSize	compactSize uint	1-9	Bit size of the signers bitvector
@@ -55389,6 +55391,8 @@ var CURRENT_PAYLOAD_VERSION = 1;
 /**
 * @class CommitmentTxPayload
 * @property {number} version
+* @property {number} height
+* @property {number} qfcVersion
 * @property {number} llmqtype
 * @property {string} quorumHash
 * @property {number} signersSize
@@ -55406,6 +55410,8 @@ function CommitmentTxPayload(options) {
   this.version = CURRENT_PAYLOAD_VERSION;
 
   if (options) {
+    this.height = options.height;
+    this.qfcVersion = options.qfcVersion;
     this.llmqtype = options.llmqtype;
     this.quorumHash = options.quorumHash;
     this.signers = options.signers;
@@ -55431,6 +55437,8 @@ CommitmentTxPayload.fromBuffer = function fromBuffer(rawPayload) {
   var payloadBufferReader = new BufferReader(rawPayload);
   var payload = new CommitmentTxPayload();
   payload.version = payloadBufferReader.readUInt16LE();
+  payload.height = payloadBufferReader.readInt32LE();
+  payload.qfcVersion = payloadBufferReader.readUInt16LE();
   payload.llmqtype = payloadBufferReader.readUInt8();
   payload.quorumHash = payloadBufferReader.read(constants.SHA256_HASH_SIZE).toString('hex');
 
@@ -55471,6 +55479,9 @@ CommitmentTxPayload.fromJSON = function fromJSON(payloadJson) {
  */
 CommitmentTxPayload.prototype.validate = function () {
   Preconditions.checkArgument(utils.isUnsignedInteger(this.version), 'Expect version to be an unsigned integer');
+  console.log('this.height', this.height)
+  Preconditions.checkArgument(utils.isUnsignedInteger(this.height), 'Expect height to be an unsigned integer');
+  Preconditions.checkArgument(utils.isUnsignedInteger(this.qfcVersion), 'Expect qfcVersion to be an unsigned integer');
   Preconditions.checkArgument(utils.isUnsignedInteger(this.llmqtype), 'Expect llmqtype to be an unsigned integer');
   Preconditions.checkArgument(utils.isHexaString(this.quorumHash), 'Expect quorumHash to be a hex string');
   Preconditions.checkArgument(utils.isHexaString(this.signers), 'Expect signers to be a hex string');
@@ -55490,6 +55501,8 @@ CommitmentTxPayload.prototype.toJSON = function toJSON(options) {
   this.validate();
   var payloadJSON = {
     version: this.version,
+    height: this.height,
+    qfcVersion: this.qfcVersion,
     llmqtype: this.llmqtype,
     quorumHash: this.quorumHash,
     signerSize: this.signerSize,
@@ -55516,7 +55529,8 @@ CommitmentTxPayload.prototype.toBuffer = function toBuffer(options) {
   var signerSizeLength;
   var validMemberSizeLength;
   // https://github.com/dashpay/dash/blob/develop/src/consensus/params.h#L42-L52
-  // the following works at least for the dummy commitments on testnet. Will revisit for actual commitments once live
+  // the following works at least for the dummy commitments on testnet.
+  // TODO: revisit for actual commitments once live
   switch(this.llmqtype) {
     case 1:
       signerSizeLength = 50;
@@ -55541,6 +55555,8 @@ CommitmentTxPayload.prototype.toBuffer = function toBuffer(options) {
   var payloadBufferWriter = new BufferWriter();
   payloadBufferWriter
     .writeUInt16LE(this.version)
+    .writeUInt32LE(this.height)
+    .writeUInt16LE(this.qfcVersion)
     .writeUInt8(this.llmqtype)
     .write(Buffer.from(this.quorumHash, 'hex'))
     .writeVarintNum(signerSizeLength)
