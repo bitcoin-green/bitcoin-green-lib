@@ -54294,7 +54294,6 @@ SubTxCloseAccountPayload.prototype.validate = function() {
   Preconditions.checkArgument(isUnsignedInteger(this.version), 'Expect version to be an unsigned integer');
   Preconditions.checkArgument(isSha256HexString(this.regTxHash), 'Expect regTxHash to be a hex string representing sha256 hash');
   Preconditions.checkArgument(isSha256HexString(this.hashPrevSubTx), 'Expect hashPrevSubTx to be a hex string representing sha256 hash');
-  Preconditions.checkArgument(isUnsignedInteger(this.creditFee), 'Expect creditFee to be an unsigned integer');
   if (this.payloadSig && this.payloadSigSize !== 0) {
     Preconditions.checkArgumentType(this.payloadSigSize, 'number', 'payloadSigSize');
     Preconditions.checkArgument(isHexString(this.payloadSig), 'expect payloadSig to be a hex string but got ' + typeof this.payloadSig);
@@ -54375,6 +54374,7 @@ SubTxCloseAccountPayload.prototype.toBuffer = function toBuffer(options) {
 };
 
 module.exports = SubTxCloseAccountPayload;
+
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
