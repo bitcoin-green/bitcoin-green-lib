@@ -55443,10 +55443,10 @@ CommitmentTxPayload.fromBuffer = function fromBuffer(rawPayload) {
   payload.quorumHash = payloadBufferReader.read(constants.SHA256_HASH_SIZE).toString('hex');
 
   payload.signersSize = payloadBufferReader.readVarintNum();
-  payload.signers = payloadBufferReader.read((payload.signersSize + 7) / 8).toString('hex');
+  payload.signers = payloadBufferReader.read(Math.floor((payload.signersSize + 7) / 8)).toString('hex');
 
   payload.validMembersSize = payloadBufferReader.readVarintNum();
-  payload.validMembers = payloadBufferReader.read((payload.validMembersSize + 7) / 8).toString('hex');
+  payload.validMembers = payloadBufferReader.read(Math.floor((payload.validMembersSize + 7) / 8)).toString('hex');
 
   payload.quorumPublicKey = payloadBufferReader.read(constants.BLS_PUBLIC_KEY_SIZE).toString('hex');
   payload.quorumVvecHash = payloadBufferReader.read(constants.SHA256_HASH_SIZE).toString('hex');
@@ -55479,7 +55479,6 @@ CommitmentTxPayload.fromJSON = function fromJSON(payloadJson) {
  */
 CommitmentTxPayload.prototype.validate = function () {
   Preconditions.checkArgument(utils.isUnsignedInteger(this.version), 'Expect version to be an unsigned integer');
-  console.log('this.height', this.height)
   Preconditions.checkArgument(utils.isUnsignedInteger(this.height), 'Expect height to be an unsigned integer');
   Preconditions.checkArgument(utils.isUnsignedInteger(this.qfcVersion), 'Expect qfcVersion to be an unsigned integer');
   Preconditions.checkArgument(utils.isUnsignedInteger(this.llmqtype), 'Expect llmqtype to be an unsigned integer');
@@ -55526,8 +55525,8 @@ CommitmentTxPayload.prototype.toJSON = function toJSON(options) {
 CommitmentTxPayload.prototype.toBuffer = function toBuffer(options) {
   this.validate();
 
-  var signerSizeLength;
-  var validMemberSizeLength;
+  var signerSizeLength = 50;
+  var validMemberSizeLength = 50;
   // https://github.com/dashpay/dash/blob/develop/src/consensus/params.h#L42-L52
   // the following works at least for the dummy commitments on testnet.
   // TODO: revisit for actual commitments once live
