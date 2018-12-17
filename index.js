@@ -11,8 +11,8 @@ bitcore.versionGuard = function(version) {
     console.warn(message);
   }
 };
-bitcore.versionGuard(global._bitcore);
-global._bitcore = bitcore.version;
+bitcore.versionGuard(global._dashcore);
+global._dashcore = bitcore.version;
 
 // crypto
 bitcore.crypto = {};
@@ -60,6 +60,7 @@ bitcore.GovObject = require('./lib/govobject');
 bitcore.URI = require('./lib/uri');
 bitcore.Unit = require('./lib/unit');
 bitcore.Message = require('./lib/message');
+bitcore.Mnemonic = require('./lib/mnemonic');
 
 // dependencies, subject to change
 bitcore.deps = {};
