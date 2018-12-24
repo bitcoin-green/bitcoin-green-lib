@@ -56,7 +56,8 @@ describe('SimplifiedMNListDiff', function () {
     it('Should be able to recover same data', function () {
       var buf = new SimplifiedMNListDiff(mnListDiffJSON).toBuffer();
       var diff = new SimplifiedMNListDiff(buf);
-      expect(diff.toObject()).to.be.equal(mnListDiffJSON);
+      var actual = diff.toObject();
+      expect(actual).to.be.deep.equal(mnListDiffJSON);
     });
   });
 });
