@@ -1,3 +1,6 @@
+/* eslint-disable */
+// TODO: Remove previous line and work through linting issues at next edit
+
 var SimplifiedMNListDiff = require('../../lib/deterministcmnlist/SimplifiedMNListDiff');
 var expect = require('chai').expect;
 
@@ -36,19 +39,21 @@ var mnListDiffJSON = {
 
 describe('SimplifiedMNListDiff', function () {
   describe('constructor', function () {
-    it('Should create a diff object from JSON object', function () {
+    it('Should call .fromObject method, if object is passed', function () {
       var diff = new SimplifiedMNListDiff(mnListDiffJSON);
       expect(diff.toObject()).to.be.deep.equal(mnListDiffJSON);
     });
   });
   describe('fromObject', function () {
     it('Should be able to create an instance from object', function () {
-
+      var diff = new SimplifiedMNListDiff(mnListDiffJSON);
+      expect(diff.mnList).to.be.deep.equal(mnListDiffJSON.mnList);
     });
   });
   describe('toObject', function () {
     it('Should give an object representation of ', function () {
-
+      var diff = new SimplifiedMNListDiff(mnListDiffJSON);
+      expect(diff.toObject()).to.be.deep.equal(mnListDiffJSON);
     });
   });
   describe('fromBuffer', function () {

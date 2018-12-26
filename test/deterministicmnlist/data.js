@@ -1,3 +1,6 @@
+/* eslint-disable */
+// TODO: Remove previous line and work through linting issues at next edit
+
 // on dapinet devnet September 2018 (protx 1, 2896)
 var mnListDiffOld = {
   baseBlockHash: '3f4a8012763b1d9b985cc77b0c0bca918830b1ef7dd083665bdc592c2cd31cf6',
