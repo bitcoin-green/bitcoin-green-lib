@@ -6,7 +6,6 @@ branches:
  only:
    - develop
    - master
-   - evo
 node_js:
 - '8'
 before_install:
@@ -20,12 +19,6 @@ before_script:
 after_script:
   - gulp coveralls
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: npm publish --tag alpha
-    on:
-      repo: dashevo/dashcore-lib
-      branch: evo
   - provider: script
     skip_cleanup: true
     script: npm publish
