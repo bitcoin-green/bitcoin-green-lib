@@ -6,9 +6,9 @@ var sinon = require('sinon');
 
 var proRegTxFixture = require('../../fixtures/payload/proregtxpayload');
 
-var DashcoreLib = require('../../../index');
+var BitgreenLib = require('../../../index');
 
-var ProRegTxPayload = DashcoreLib.Transaction.Payload.ProRegTxPayload;
+var ProRegTxPayload = BitgreenLib.Transaction.Payload.ProRegTxPayload;
 
 describe('ProRegTxPayload', function () {
   beforeEach(function () {

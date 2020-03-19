@@ -2,7 +2,7 @@
 Create and derive extended public and private keys according to the BIP32 standard for Hierarchical Deterministic (HD) keys.
 
 ## Hierarchically Derived Keys
-Dashcore provides full support for [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki), allowing for many key management schemas that benefit from this property. Please be sure to read and understand the basic concepts and the warnings on that BIP before using these classes.
+Bitgreen provides full support for [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki), allowing for many key management schemas that benefit from this property. Please be sure to read and understand the basic concepts and the warnings on that BIP before using these classes.
 
 ## HDPrivateKey
 An instance of a [PrivateKey](privatekey.md) that also contains information required to derive child keys.
@@ -10,7 +10,7 @@ An instance of a [PrivateKey](privatekey.md) that also contains information requ
 Sample usage:
 
 ```javascript
-var HDPrivateKey = dashcore.HDPrivateKey;
+var HDPrivateKey = bitgreen.HDPrivateKey;
 
 var hdPrivateKey = new HDPrivateKey();
 var retrieved = new HDPrivateKey('xpriv...');

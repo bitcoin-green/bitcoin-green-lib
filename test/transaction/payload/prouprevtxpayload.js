@@ -3,11 +3,11 @@
 
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var DashcoreLib = require('../../..');
+var BitgreenLib = require('../../..');
 
 var proUpRevTxFixture = require('../../fixtures/payload/prouprevtxpayload');
 
-var Payload = DashcoreLib.Transaction.Payload;
+var Payload = BitgreenLib.Transaction.Payload;
 var ProUpRevTxPayload = Payload.ProUpRevTxPayload;
 
 describe('ProUpRevTxPayload', function () {

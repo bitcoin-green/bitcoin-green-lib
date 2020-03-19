@@ -3,16 +3,16 @@
 
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var DashcoreLib = require('../../../index');
-var SubTxCloseAccountPayload = DashcoreLib.Transaction.Payload.SubTxCloseAccountPayload;
-var PrivateKey = DashcoreLib.PrivateKey;
-var BufferUtil = DashcoreLib.util.buffer;
-var isHexString = DashcoreLib.util.js.isHexaString;
+var BitgreenLib = require('../../../index');
+var SubTxCloseAccountPayload = BitgreenLib.Transaction.Payload.SubTxCloseAccountPayload;
+var PrivateKey = BitgreenLib.PrivateKey;
+var BufferUtil = BitgreenLib.util.buffer;
+var isHexString = BitgreenLib.util.js.isHexaString;
 var privateKey = 'cQSA77TsRYNEsYRmLoY7Y3gNF3Kb5qff4yUv3hWB7fm46YQ2njqN';
 var regTxHash = '54b8f5e4e77853f136ced5d29e92afabf380bf37ac54b46755c2211774960ee1';
 var prevSubTxHash = 'bf742c5eafd6f8f1241a9e1a0a62fd7e5affed72178d8e03712fe42a34c27ca7';
 var pubKeyId = new PrivateKey(privateKey).toPublicKey()._getID();
-var CORRECT_SIGNATURE_SIZE = DashcoreLib.Transaction.Payload.constants.COMPACT_SIGNATURE_SIZE;
+var CORRECT_SIGNATURE_SIZE = BitgreenLib.Transaction.Payload.constants.COMPACT_SIGNATURE_SIZE;
 var payloadSig = '8167200911e63e846621d6e5c7f55ea872a791d9ef51fa32294ce2a3e4247016f0750c9cb7af3a50f19455b77f9789f79b7c5ecb84dbb897b3d50961b73a003b1f';
 
 var validSubTxCloseAccountPayloadJSON = {

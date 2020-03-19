@@ -1,5 +1,5 @@
 {
-  "name": "@dashevo/dashcore-lib",
+  "name": "bitgreen-lib",
   "version": "0.18.0",
   "description": "A pure and powerful JavaScript Dash library.",
   "author": "Dash Core Group, Inc. <dev@dash.org>",
@@ -90,16 +90,16 @@
     "bip69",
     "bip70",
     "multisig",
-    "dashcore"
+    "bitgreen"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashcore-lib.git"
+    "url": "https://github.com/bitgreen/bitgreen-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/dashcore-lib/issues"
+    "url": "https://github.com/bitgreen/bitgreen-lib/issues"
   },
-  "homepage": "https://github.com/dashevo/dashcore-lib",
+  "homepage": "https://github.com/bitgreen/bitgreen-lib",
   "browser": {
     "request": "browser-request"
   },

@@ -1,7 +1,7 @@
-# Dashcore Library
+# Bitgreen Library
 
-[![Build Status](https://img.shields.io/travis/dashevo/dashcore-lib.svg?branch=master)](https://travis-ci.org/dashevo/dashcore-lib)
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashcore-lib.svg)](https://www.npmjs.org/package/@dashevo/dashcore-lib)
+[![Build Status](https://img.shields.io/travis/bitgreen/bitgreen-lib.svg?branch=master)](https://travis-ci.org/bitgreen/bitgreen-lib)
+[![NPM Package](https://img.shields.io/npm/v/@bitgreen/bitgreen-lib.svg)](https://www.npmjs.org/package/@bitgreen/bitgreen-lib)
 
 > A pure and powerful JavaScript Dash library.
 
@@ -19,31 +19,31 @@ Dash is a powerful new peer-to-peer platform for the next generation of financia
 ### NodeJS
 
 ```
-npm install @dashevo/dashcore-lib
+npm install @bitgreen/bitgreen-lib
 ```
 
 ### Browser
 
-See the section below to generate your own bundle, or download the pre-generated [minified file](dist/dashcore-lib.min.js)
+See the section below to generate your own bundle, or download the pre-generated [minified file](dist/bitgreen-lib.min.js)
 
 #### Building the Browser Bundle
 
-To build a dashcore-lib full bundle for the browser:
+To build a bitgreen-lib full bundle for the browser:
 
 ```sh
 npm run build
 ```
 
-This will generate files named `dashcore-lib.js` and `dashcore-lib.min.js` in the `dist/` folder.
+This will generate files named `bitgreen-lib.js` and `bitgreen-lib.min.js` in the `dist/` folder.
 
 ## Usage
 
 ### Browser
 
 ```
-<script src='./dist/dashcore-lib.min.js' type="text/javascript"></script>
+<script src='./dist/bitgreen-lib.min.js' type="text/javascript"></script>
 <script>
-  const PrivateKey = dashcore.PrivateKey;
+  const PrivateKey = bitgreen.PrivateKey;
   const privateKey = new PrivateKey();
   const address = privateKey.toAddress().toString();
 </script>
@@ -53,19 +53,19 @@ This will generate files named `dashcore-lib.js` and `dashcore-lib.min.js` in th
 
 Some functionality is implemented as a module that can be installed separately:
 
-* [Payment Protocol Support](https://github.com/dashevo/dashcore-payment-protocol)
-* [Peer to Peer Networking](https://github.com/dashevo/dashcore-p2p)
-* [Dash Core JSON-RPC](https://github.com/dashevo/dashd-rpc)
-* [Payment Channels](https://github.com/dashevo/dashcore-channel)
-* [Mnemonics](https://github.com/dashevo/dashcore-mnemonic)
-* [Elliptical Curve Integrated Encryption Scheme](https://github.com/dashevo/bitcore-ecies-dash)
-* [Signed Messages](https://github.com/dashevo/bitcore-message-dash)
+* [Payment Protocol Support](https://github.com/bitgreen/bitgreen-payment-protocol)
+* [Peer to Peer Networking](https://github.com/bitgreen/bitgreen-p2p)
+* [Dash Core JSON-RPC](https://github.com/bitgreen/dashd-rpc)
+* [Payment Channels](https://github.com/bitgreen/bitgreen-channel)
+* [Mnemonics](https://github.com/bitgreen/bitgreen-mnemonic)
+* [Elliptical Curve Integrated Encryption Scheme](https://github.com/bitgreen/bitcore-ecies-dash)
+* [Signed Messages](https://github.com/bitgreen/bitcore-message-dash)
 
 ### Development & Tests
 
 ```sh
-git clone https://github.com/dashevo/dashcore-lib
-cd dashcore-lib
+git clone https://github.com/bitgreen/bitgreen-lib
+cd bitgreen-lib
 npm install
 ```
 
@@ -111,7 +111,7 @@ Some examples can be found [here](docs/examples.md), below is a list of direct l
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/dashevo/dashcore-lib/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/bitgreen/bitgreen-lib/blob/master/CONTRIBUTING.md) file.
 
 ## License
 

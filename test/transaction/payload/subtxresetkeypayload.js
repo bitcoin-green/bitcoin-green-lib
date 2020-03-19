@@ -3,15 +3,15 @@
 
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var DashcoreLib = require('../../../index');
-var SubTxResetKeyPayload = DashcoreLib.Transaction.Payload.SubTxResetKeyPayload;
-var PrivateKey = DashcoreLib.PrivateKey;
-var BufferUtil = DashcoreLib.util.buffer;
-var isHexString = DashcoreLib.util.js.isHexaString;
+var BitgreenLib = require('../../../index');
+var SubTxResetKeyPayload = BitgreenLib.Transaction.Payload.SubTxResetKeyPayload;
+var PrivateKey = BitgreenLib.PrivateKey;
+var BufferUtil = BitgreenLib.util.buffer;
+var isHexString = BitgreenLib.util.js.isHexaString;
 var privateKey = 'cQSA77TsRYNEsYRmLoY7Y3gNF3Kb5qff4yUv3hWB7fm46YQ2njqN';
 var subTxHash = '54b8f5e4e77853f136ced5d29e92afabf380bf37ac54b46755c2211774960ee1';
 var pubKeyId = new PrivateKey(privateKey).toPublicKey()._getID();
-var CORRECT_SIGNATURE_SIZE = DashcoreLib.Transaction.Payload.constants.COMPACT_SIGNATURE_SIZE;
+var CORRECT_SIGNATURE_SIZE = BitgreenLib.Transaction.Payload.constants.COMPACT_SIGNATURE_SIZE;
 var payloadSig = '96a4dba864e46b2a8283763351a74a53ebc0a7ce7611f62b5250b6592156b618d584c363bf04dc20ebd5f8ba8f073e0e4e78a89364e5c57a814eef6278fd51ab1f';
 
 var validSubTxResetKeyPayloadJSON = {

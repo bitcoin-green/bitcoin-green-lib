@@ -1,4 +1,4 @@
-declare module "@dashevo/dashcore-lib" {
+declare module "@bitgreen/bitgreen-lib" {
     /**
      * Instantiate an address from an address String or Buffer, a public key or script hash Buffer,
      * or an instance of {@link PublicKey} or {@link Script}.

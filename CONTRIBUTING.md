@@ -1,6 +1,6 @@
-# Contributing to dashcore-lib
+# Contributing to bitgreen-lib
 
-We're working hard to make *dashcore-lib* the most powerful JavaScript library for working with Dash. Our goal is to have *dashcore-lib* be a library that can be used by anyone interested in Dash, and to level expertise differences with great design and documentation.
+We're working hard to make *bitgreen-lib* the most powerful JavaScript library for working with Dash. Our goal is to have *bitgreen-lib* be a library that can be used by anyone interested in Dash, and to level expertise differences with great design and documentation.
 
 ## Community
 
@@ -18,7 +18,7 @@ Ideally, please make sure to run:
 
 ## Design Guidelines
 
-These are some global design goals in dashcore-lib that any change must adhere.
+These are some global design goals in bitgreen-lib that any change must adhere.
 
 ### D1 - Naming Matters
 
@@ -89,7 +89,7 @@ var bufferUtil = require('./util/buffer');
 
 #### G7 - Standard Methods
 
-When possible, dashcore-lib objects should have standard methods on an instance prototype:
+When possible, bitgreen-lib objects should have standard methods on an instance prototype:
 * `toObject/toJSON` - A plain JavaScript object that `JSON.stringify` can call
 * `toString` - A string representation of the instance
 * `toBuffer` - A hex Buffer
@@ -99,7 +99,7 @@ These should have a matching static method that can be used for instantiation:
 * `fromString` - Should be able to instantiate with output from `toString`
 * `fromBuffer` - Should likewise be able to instantiate from output from `toBuffer`
 
-`JSON.stringify` and `JSON.parse` are expected to be handled outside of the scope of dashcore-lib methods. For example, calling `JSON.stringify` on an dashcore-lib object will behave as expected and call `transaction.toJSON()` and then stringify it:
+`JSON.stringify` and `JSON.parse` are expected to be handled outside of the scope of bitgreen-lib methods. For example, calling `JSON.stringify` on an bitgreen-lib object will behave as expected and call `transaction.toJSON()` and then stringify it:
 
 ```javascript
 var transactionString = JSON.stringify(transaction);
@@ -114,7 +114,7 @@ var tx = new Transaction(data);
 
 ### Errors
 
-#### E1 - Use dashcore.Errors
+#### E1 - Use bitgreen.Errors
 
 We've designed a structure for Errors to follow and are slowly migrating to it.
 
@@ -203,14 +203,14 @@ Don't write long tests, write helper functions to make them be as short and conc
 
 Inputs for tests should not be generated randomly. Also, the type and structure of outputs should be checked.
 
-#### T3 - Require 'dashcore' and Look up Classes from There
+#### T3 - Require 'bitgreen' and Look up Classes from There
 
-This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the dashcore object.
+This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the bitgreen object.
 
 DO:
 ```javascript
-var dashcore = require('../');
-var PublicKey = dashcore.PublicKey;
+var bitgreen = require('../');
+var PublicKey = bitgreen.PublicKey;
 ```
 DON'T:
 ```javascript
@@ -243,8 +243,8 @@ git checkout -b remove/some-file
 
 We expect pull requests to be rebased to the master branch before merging:
 ```sh
-git remote add dashevo git@github.com:dashevo/dashcore-lib.git
-git pull --rebase dashevo master
+git remote add bitgreen git@github.com:bitgreen/bitgreen-lib.git
+git pull --rebase bitgreen master
 ```
 
 Note that we require rebasing your branch instead of merging it, for commit readability reasons.
@@ -255,11 +255,11 @@ git push origin your_branch_name
 git push origin feature/some-new-stuff
 git push origin fix/some-bug
 ```
-Finally go to [github.com/dashevo/dashcore-lib](https://github.com/dashevo/dashcore-lib) in your web browser and issue a new pull request.
+Finally go to [github.com/bitgreen/bitgreen-lib](https://github.com/bitgreen/bitgreen-lib) in your web browser and issue a new pull request.
 
-Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of dashcore-lib.
+Main contributors will review your code and possibly ask for changes before your code is pulled in to the main repository.  We'll check that all tests pass, review the coding style, and check for general code correctness. If everything is OK, we'll merge your pull request and your code will be part of bitgreen-lib.
 
 If you have any questions feel free to post them to
-[github.com/dashevo/dashcore-lib/issues](https://github.com/dashevo/dashcore-lib/issues).
+[github.com/bitgreen/bitgreen-lib/issues](https://github.com/bitgreen/bitgreen-lib/issues).
 
 Thanks for your time and code!
