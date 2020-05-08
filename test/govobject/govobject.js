@@ -32,7 +32,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
 
       govObject = govObject.fromObject(jsonProposal);
@@ -68,7 +68,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
 
       var govObject = govObject.fromObject(JSON.stringify(jsonProposal));
@@ -87,7 +87,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var govObject = govObject.fromObject(jsonProposal);
       var newGovObject = new GovObject(govObject);
@@ -115,7 +115,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var govObject = govObject.fromObject(jsonProposal);
 
@@ -141,7 +141,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var govObject = govObject.fromObject(jsonProposal);
       var govObject2 = new GovObject;
@@ -163,7 +163,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var govObject = govObject.fromObject(jsonProposal);
       var govFromHexa = new GovObject;
@@ -184,7 +184,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var stringified = JSON.stringify(jsonProposal);
       stringified+="foobar";
@@ -205,7 +205,7 @@ describe('GovObject', function(){
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
 
        var govObjRes = function(){
@@ -225,7 +225,7 @@ describe('GovObject', function(){
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
 
        var govObjRes = function(){
@@ -245,7 +245,7 @@ describe('GovObject', function(){
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
        var govObjRes = function(){
          return govObject.fromObject(jsonProposal);
@@ -276,7 +276,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var govObject = govObject.fromObject(jsonProposal);
       govObject.serialize().should.equal(expectedHex);
@@ -292,7 +292,7 @@ describe('GovObject', function(){
         payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.bitg.org"
       };
       var govObject = govObject.fromObject(jsonProposal);
       govObject.inspect().should.equal("<GovObject: "+expectedHex+">");

@@ -64,7 +64,7 @@ var jsonProposal = {
   payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
   payment_amount: 10,
   type: 1,
-  url: "http://www.dash.org/proposal/first_proposal"
+  url: "http://www.bitg.org/proposal/first_proposal"
 };
 
 // Will instantiate the govObject given the json passed as arg for fromObject
@@ -146,7 +146,7 @@ var jsonProposal = {
   payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
   payment_amount: 10,
   type: 1,
-  url: "http://www.dash.org"
+  url: "http://www.bitg.org"
 };
 
 var proposal = new Proposal();
