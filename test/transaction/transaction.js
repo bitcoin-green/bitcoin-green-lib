@@ -65,7 +65,7 @@ describe('Transaction', function() {
       'script': testScript,
       'satoshis': testAmount
     })
-    .to('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', testAmount - 10000);
+    .to('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k', testAmount - 10000);
 
   it('can serialize to a plain javascript object', function() {
     var object = testTransaction.toObject();
@@ -78,7 +78,7 @@ describe('Transaction', function() {
 
   it('will not accept NaN as an amount', function() {
     (function() {
-      var stringTx = new Transaction().to('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', NaN);
+      var stringTx = new Transaction().to('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k', NaN);
     }).should.throw('Amount is expected to be a positive integer');
   });
 
@@ -264,7 +264,7 @@ describe('Transaction', function() {
   };
   var anyoneCanSpendUTXO = JSON.parse(JSON.stringify(simpleUtxoWith100000Satoshis));
   anyoneCanSpendUTXO.script = new Script().add('OP_TRUE');
-  var toAddress = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+  var toAddress = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
   var changeAddress = 'yLygrKXHautSYwRAF3TUGJvidxKqXwLA23';
   var changeAddressP2SH = '8tdHAwttdvR87BihpKRSUjN6HyQNVZsqBv';
   var privateKey = 'cSBnVM4xvxarwGQuAfQFwqDg9k5tErHUHzgWsEfD4zdwUasvqRVY';
@@ -730,7 +730,7 @@ describe('Transaction', function() {
           'script': testScript,
           'satoshis': testAmount
         })
-        .to('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', testAmount - 10000);
+        .to('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k', testAmount - 10000);
 
       tx.outputs[0]._satoshis = 100;
       tx.outputs[0]._satoshisBN = new BN('fffffffffffffff', 16);
@@ -746,7 +746,7 @@ describe('Transaction', function() {
           'script': testScript,
           'satoshis': testAmount
         })
-        .to('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', testAmount - 10000);
+        .to('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k', testAmount - 10000);
 
       tx.outputs[0]._satoshis = -100;
       tx.outputs[0]._satoshisBN = new BN(-100, 10);
@@ -763,7 +763,7 @@ describe('Transaction', function() {
           'script': testScript,
           'satoshis': testAmount
         })
-        .to('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', testAmount - 10000);
+        .to('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k', testAmount - 10000);
 
       tx.toBuffer = sinon.stub().returns({
         length: 10000000
@@ -783,7 +783,7 @@ describe('Transaction', function() {
           'script': testScript,
           'satoshis': testAmount
         })
-        .to('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', testAmount - 10000);
+        .to('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k', testAmount - 10000);
 
       tx.isCoinbase = sinon.stub().returns(false);
       tx.inputs[0].isNull = sinon.stub().returns(true);
@@ -1826,7 +1826,7 @@ describe('Transaction', function() {
       var regTxId = 'd0df4810f9899a71968b5e4147b52cab86ad9342a9806a514227514d8a160a3c';
       var hashPrevSubTx = 'd0df4810f9899a71968b5e4147b52cab86ad9342a9806a514227514d8a160a3c';
       var hashSTPacket = 'a0df4810f9899a71968b5e4147b52cab86ad9342a9806a514227514d8a160a3a';
-      var creditFee = 1000; // 0.00001 dash
+      var creditFee = 1000; // 0.00001 BITG
 
       it('Should parse and verify hex', function () {
         var subTxTransitionTxHex = '03000c00000000000000ac01003c0a168a4d512742516a80a94293ad86ab2cb547415e8b96719a89f91048dfd03c0a168a4d512742516a80a94293ad86ab2cb547415e8b96719a89f91048dfd0e8030000000000003a0a168a4d512742516a80a94293ad86ab2cb547415e8b96719a89f91048dfa0411f3ae683b0a3ac3c3342ab30e646df344e8c3648902b48c5cb5f29c17f15a43ad93943b49c1f83a06321c6c434ae1c73d22ae83da3d39b9c5ce98a7947f5deab90';

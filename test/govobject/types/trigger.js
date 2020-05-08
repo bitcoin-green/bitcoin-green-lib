@@ -22,7 +22,7 @@ describe('Trigger', function() {
   var validJSONTrigger = {
     network: "testnet",
     event_block_height: 110976,
-    payment_addresses: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y',
+    payment_addresses: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi',
     payment_amounts: '10.00000000|12.00000000',
     proposal_hashes: '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7',
     type: 2,
@@ -32,7 +32,7 @@ describe('Trigger', function() {
     var trigger = new Trigger();
     trigger.network = 'testnet';
     trigger.event_block_height = 110976;
-    trigger.payment_addresses = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y';
+    trigger.payment_addresses = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi';
     trigger.payment_amounts = '10.00000000|12.00000000';
     trigger.proposal_hashes = '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7';
     trigger.type = 2;
@@ -43,7 +43,7 @@ describe('Trigger', function() {
   it('should throw error if invalid SB height', function() {
     var trigger = new Trigger();
     trigger.event_block_height = 110975;
-    trigger.payment_addresses = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y';
+    trigger.payment_addresses = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi';
     trigger.payment_amounts = '10.00000000|12.00000000';
     trigger.proposal_hashes = '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7';
     trigger.type = 2;
@@ -58,7 +58,7 @@ describe('Trigger', function() {
     var trigger = new Trigger();
     trigger.network = 'testnet';
     trigger.event_block_height = 110976;
-    trigger.payment_addresses = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    trigger.payment_addresses = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     trigger.payment_amounts = '10.00000000|12.00000000';
     trigger.proposal_hashes = '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7';
     trigger.type = 2;
@@ -66,7 +66,7 @@ describe('Trigger', function() {
       return trigger.serialize();
     }).to.throw(errors.GovObject.Trigger.fieldsMismatch);
 
-    trigger.payment_addresses = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y';
+    trigger.payment_addresses = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi';
     trigger.payment_amounts = '10.00000000';
     expect(function() {
       return trigger.serialize();
@@ -104,7 +104,7 @@ describe('Trigger', function() {
 
   it('should return error if property event_block_height is missing', function() {
     var jsonTrigger = {
-      payment_addresses: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y',
+      payment_addresses: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi',
       payment_amounts: '10.00000000|12.00000000',
       proposal_hashes: '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7',
       type: 2,
@@ -123,7 +123,7 @@ describe('Trigger', function() {
   it('should return error if property event_block_height is NaN', function() {
     var jsonTrigger = {
       event_block_height: '110975',
-      payment_addresses: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y',
+      payment_addresses: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi',
       payment_amounts: '10.00000000|12.00000000',
       proposal_hashes: '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7',
       type: 2,
@@ -272,7 +272,7 @@ describe('Trigger', function() {
     expect(trigger.toString()).to.equal(datahex);
     expect(trigger.type).to.equal(2);
     expect(trigger.event_block_height).to.equal(110976);
-    expect(trigger.payment_addresses).to.equal('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y');
+    expect(trigger.payment_addresses).to.equal('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi');
     expect(trigger.payment_amounts).to.equal('10.00000000|12.00000000');
     expect(trigger.proposal_hashes).to.equal('20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7');
   });

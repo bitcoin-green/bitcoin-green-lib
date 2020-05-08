@@ -17,7 +17,7 @@
 
 ## Governance Object
 
-A Governance Object (or "govObject") is a generic structure introduced in Dash Core v12.1 to allow for the creation of Budget Proposals, Triggers, and Watch Dogs. Class inheritance has been utilized to extend this generic object into a "Proposal" which is outlined throughout the remainder of this document. 
+A Governance Object (or "govObject") is a generic structure introduced in Dash Core v12.1 to allow for the creation of Budget Proposals, Triggers, and Watch Dogs. Class inheritance has been utilized to extend this generic object into a "Proposal" which is outlined throughout the remainder of this document.
 
 ### `new GovObject([govObjectData])`
 
@@ -26,9 +26,9 @@ Creates a new `GovObject` object where:
 
 ### Methods
 
-####  `dataHex`  
+####  `dataHex`
 Returns a dataHex representation (see above)
-####  `fromObject`  
+####  `fromObject`
 Allow to create a govObj from a json or stringifiedJSON obj
 ####  `fromString`
 Allow to create a govObj from a hex string
@@ -61,7 +61,7 @@ var jsonProposal = {
   name:  "My First GovObject",
   start_epoch: 1483228800,
   end_epoch: 1483747200,
-  payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+  payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
   payment_amount: 10,
   type: 1,
   url: "http://www.dash.org/proposal/first_proposal"
@@ -143,7 +143,7 @@ var jsonProposal = {
   name: "My First Proposal",
   start_epoch: startDate,
   end_epoch: endDate,
-  payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+  payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
   payment_amount: 10,
   type: 1,
   url: "http://www.dash.org"

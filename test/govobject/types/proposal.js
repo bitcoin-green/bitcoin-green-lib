@@ -27,7 +27,7 @@ describe('Proposal', function() {
     name: "TestProposal",
     start_epoch: startDate,
     end_epoch: endDate,
-    payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+    payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
     payment_amount: 10,
     type: 1,
     url: "http://www.dash.org"
@@ -38,7 +38,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
@@ -53,7 +53,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = 1477872000;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = 'not a date'; // invalid date
     proposal.type = 1;
@@ -70,7 +70,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = 'not a date';
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
@@ -86,7 +86,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = 1472688000;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
@@ -107,7 +107,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = end_epoch;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = start_epoch;
     proposal.type = 1;
@@ -174,7 +174,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = '';
     proposal.start_epoch = startDate;
     proposal.type = 1;
@@ -192,7 +192,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
@@ -210,7 +210,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'Test Proposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
@@ -226,7 +226,7 @@ describe('Proposal', function() {
       name: "TestProposal",
       start_epoch: startDate,
       end_epoch: endDate,
-      payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+      payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
       payment_amount: 10,
       type: 1,
       url: "http://www.dash.org"
@@ -243,7 +243,7 @@ describe('Proposal', function() {
       name: "TestProposal",
       start_epoch: startDate,
       end_epoch: endDate,
-      payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+      payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
       payment_amount: 10,
       type: 1,
       url: "http://www.dash.org"
@@ -280,7 +280,7 @@ describe('Proposal', function() {
     var jsonProposal = {
       start_epoch: startDate,
       end_epoch: endDate,
-      payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+      payment_address: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
       payment_amount: 10,
       type: 1,
       url: "http://www.dash.org"

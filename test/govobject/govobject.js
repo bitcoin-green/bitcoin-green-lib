@@ -29,7 +29,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -46,7 +46,7 @@ describe('GovObject', function(){
     })
     it('should validate address', function(){
       var govObject = new GovObject;
-      govObject._verifyAddress('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh','testnet').should.equal(true);
+      govObject._verifyAddress('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k','testnet').should.equal(true);
       govObject._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B6','livenet').should.equal(true);
       govObject._verifyAddress('XuYDEzZzKxn&&knPDiVKe91sJasfajkshfjD1nQnnn5B6','livenet').should.equal(false);
       govObject._verifyAddress('knPDiVKe91sJasfajkshfjD1nQnnn5B6','testnet').should.equal(false);
@@ -55,7 +55,7 @@ describe('GovObject', function(){
       govObject._verifyAddress(' XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B','livenet').should.equal(false);
       govObject._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B ','livenet').should.equal(false);
       govObject._verifyAddress('$XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B','livenet').should.equal(false);
-      govObject._verifyAddress('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh','livenet').should.equal(false);
+      govObject._verifyAddress('gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k','livenet').should.equal(false);
       govObject._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B6','testnet').should.equal(false);
     })
     it('should cast a stringified JSON Proposal into a Proposal Object', function(){
@@ -65,7 +65,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -84,7 +84,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -112,7 +112,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -138,7 +138,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -160,7 +160,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -181,7 +181,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -203,7 +203,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         url:"http://www.dash.org"
       };
@@ -223,7 +223,7 @@ describe('GovObject', function(){
         type:"foobar",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         url:"http://www.dash.org"
       };
@@ -243,7 +243,7 @@ describe('GovObject', function(){
         type:42,
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         url:"http://www.dash.org"
       };
@@ -273,7 +273,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -289,7 +289,7 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k',
         payment_amount:10,
         type:1,
         url:"http://www.dash.org"
@@ -305,7 +305,7 @@ describe('GovObject', function(){
       var jsonTrigger = {
         event_block_height: 110976,
         network: 'testnet',
-        payment_addresses: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y',
+        payment_addresses: 'gX8oZ5xbzAbwu3VSjoP1qgPTo69mqTuk2k|gbu6om6e2pok1JnGcwXA4ut9opj2TuSYNi',
         payment_amounts: '10.00000000|12.00000000',
         proposal_hashes: '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7',
         type: 2,
