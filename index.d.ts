@@ -939,7 +939,7 @@ declare module "@bitgreen/bitgreen-lib" {
         fromString(string: any): void;
 
         /**
-         * Retrieve a hex string that can be used with dashd's CLI interface
+         * Retrieve a hex string that can be used with bitgreend's CLI interface
          *
          * @param {Object} opts allows to skip certain tests. {@see Transaction#serialize}
          * @return {string}
