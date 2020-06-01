@@ -55,7 +55,7 @@ Some functionality is implemented as a module that can be installed separately:
 
 * [Payment Protocol Support](https://github.com/bitgreen/bitgreen-payment-protocol)
 * [Peer to Peer Networking](https://github.com/bitgreen/bitgreen-p2p)
-* [Dash Core JSON-RPC](https://github.com/bitgreen/bitgreend-rpc)
+* [Dash Core JSON-RPC](https://github.com/bitgreen/bitcoind-rpc)
 * [Payment Channels](https://github.com/bitgreen/bitgreen-channel)
 * [Mnemonics](https://github.com/bitgreen/bitgreen-mnemonic)
 * [Elliptical Curve Integrated Encryption Scheme](https://github.com/bitgreen/bitcore-ecies-dash)
