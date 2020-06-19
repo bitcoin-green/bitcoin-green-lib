@@ -94,12 +94,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/PitTxid/bitgreen-lib.git"
+    "url": "https://github.com/bitgreen/bitgreen-lib.git"
   },
   "bugs": {
-    "url": "https://github.com/PitTxid/bitgreen-lib/issues"
+    "url": "https://github.com/bitgreen/bitgreen-lib/issues"
   },
-  "homepage": "https://github.com/PitTxid/bitgreen-lib",
+  "homepage": "https://github.com/bitgreen/bitgreen-lib",
   "browser": {
     "request": "browser-request"
   },
