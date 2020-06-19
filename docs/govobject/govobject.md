@@ -33,7 +33,7 @@ Allow to create a govObj from a json or stringifiedJSON obj
 ####  `fromString`
 Allow to create a govObj from a hex string
 ####  `checkedSerialize`
-Return a hex string that can be used in dashd CLI
+Return a hex string that can be used in bitgreend CLI
 ####  `serialize`
 Return a hex string
 ####  `inspect`

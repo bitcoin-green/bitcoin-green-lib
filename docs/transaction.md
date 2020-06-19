@@ -19,7 +19,7 @@ var transaction = new Transaction()
 
 You can obtain the input and output total amounts of the transaction in satoshis by accessing the fields `inputAmount` and `outputAmount`.
 
-Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the dashd reference client.
+Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the bitgreend reference client.
 
 ```bash
 dash-cli sendrawtransaction <serialized transaction>
